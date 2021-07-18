@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+
+<h1>Delete Student</h1>
+<form method="post" class="post-form" style="width:400px">
+    {% csrf_token %}
+    <fieldset disabled>
+        Student ID: {{object.id}} <br>
+        First Name: {{object.firstName}} <br>
+        Last Name: {{object.lastName}} <br>
+        Registration Date: {{object.registrationDate}} <br>
+         <br>
+        <br>
+        Click YES to confirm
+    </fieldset>
+    <input type = "submit" class="btn btn-danger" value="YES">
+    <a href="{% url 'listView' %}" class="btn btn-light">Cancel</a>
+</form>
+
+{% endblock %}
+</body>
+</html>

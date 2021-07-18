@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+
+<h1>Detail View</h1>
+<fieldset disabled>
+        Id: {{object.id}} <br>
+        Grade: {{object.grade}} <br>
+        Course Id: {{object.course_id}} <br>
+        Student Id: {{object.student_id}} <br>
+    <br>
+    <br>
+</fieldset>
+<br>
+<br>
+<center>
+    <a href="create" class="btn btn-primary">Add New Enrollment</a>
+    <a href="/enrollments/enrollments" class="btn btn-light">Back</a>
+</center>
+
+{% endblock %}
+</body>
+</html>

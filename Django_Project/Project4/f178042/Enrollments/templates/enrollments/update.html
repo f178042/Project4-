@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block main %}
+
+
+<h1>Update Enrollment:</h1>
+<form method="POST" class="post-form"  style="width:400px">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-primary" value = "Update">
+    <a href="/enrollments/enrollments" class="btn btn-light">Cancel</a>
+</form>
+{% endblock %}
+</body>
+</html>

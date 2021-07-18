@@ -1,0 +1,9 @@
+
+StudentApp
+http://127.0.0.1:8000/students/student/
+
+CourseApp
+http://127.0.0.1:8000/courses/course
+
+EnrollmentApp
+http://127.0.0.1:8000/enrollments/enrollments/
